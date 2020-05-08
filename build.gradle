@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+String packagePath = 'net.frankheijden.insights.addons.griefprevention'
+group = packagePath
+version = '1.0.0'
+description = 'InsightsGriefPreventionAddon'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://papermc.io/repo/repository/maven-public/' }
+    maven { url 'https://jitpack.io' }
+}
+
+dependencies {
+    compileOnly 'com.github.FrankHeijden:Insights:feature~cache-SNAPSHOT'
+    compileOnly 'com.destroystokyo.paper:paper-api:1.15.2-R0.1-SNAPSHOT'
+    compileOnly 'com.github.TechFortress:GriefPrevention:16.13.0'
+}
