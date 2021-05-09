@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'net.kyori.blossom' version '1.1.0'
+    id 'net.kyori.blossom' version '1.2.0'
 }
 
 String packagePath = 'dev.frankheijden.insights.addons.griefprevention'
@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'com.github.InsightsPlugin:Insights:feature~addons-SNAPSHOT'
+    compileOnly 'com.github.InsightsPlugin:Insights:v6.3.1'
     compileOnly 'com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT'
     compileOnly 'com.github.TechFortress:GriefPrevention:16.17.1'
 }
