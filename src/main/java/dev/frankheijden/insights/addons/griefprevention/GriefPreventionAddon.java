@@ -7,8 +7,9 @@ import dev.frankheijden.insights.api.addons.SimpleCuboidRegion;
 import dev.frankheijden.insights.api.objects.math.Vector3;
 import me.ryanhamshire.GriefPrevention.Claim;
 import me.ryanhamshire.GriefPrevention.GriefPrevention;
+import me.ryanhamshire.GriefPrevention.events.ClaimChangeEvent;
 import me.ryanhamshire.GriefPrevention.events.ClaimDeletedEvent;
-import me.ryanhamshire.GriefPrevention.events.ClaimModifiedEvent;
+import me.ryanhamshire.GriefPrevention.events.ClaimResizeEvent;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -55,7 +56,12 @@ public class GriefPreventionAddon implements InsightsAddon, Listener {
     }
 
     @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
-    public void onClaimModified(ClaimModifiedEvent event) {
+    public void onClaimChange(ClaimChangeEvent event) {
+        deleteClaimCache(event.getFrom());
+    }
+
+    @EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
+    public void onClaimResize(ClaimResizeEvent event) {
         deleteClaimCache(event.getFrom());
     }
 
