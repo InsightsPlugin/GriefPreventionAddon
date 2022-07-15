@@ -27,7 +27,7 @@ public class GriefPreventionAddon implements InsightsAddon, Listener {
         Location max = claim.getGreaterBoundaryCorner();
         return Optional.of(new SimpleCuboidRegion(
                 min.getWorld(),
-                new Vector3(min.getBlockX(), 0, min.getBlockZ()),
+                new Vector3(min.getBlockX(), min.getWorld().getMinHeight(), min.getBlockZ()),
                 new Vector3(max.getBlockX(), max.getWorld().getMaxHeight() - 1, max.getBlockZ()),
                 getPluginName(),
                 getId(claim)
