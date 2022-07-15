@@ -5,7 +5,7 @@ plugins {
 
 String packagePath = 'dev.frankheijden.insights.addons.griefprevention'
 group = packagePath
-version = '2.0.1'
+version = '2.1.0'
 description = 'GriefPreventionAddon'
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
 
